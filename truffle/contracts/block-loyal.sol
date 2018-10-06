@@ -5,7 +5,7 @@ contract Loyal{
 		address memberAddress;
 		uint tokensBought;
 		uint[] tokenspermember;
-				bool canBuy;
+		bool canBuy;
 
 	}
 }
