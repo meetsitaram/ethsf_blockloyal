@@ -28,7 +28,7 @@ contract UnitedMileagePlusToken {
      *
      * Initializes contract with initial supply tokens to the creator of the contract
      */
-    function UnitedMileagePlusToken(
+    constructor(
         // uint256 initialSupply,
         // string tokenName,
         // string tokenSymbol
