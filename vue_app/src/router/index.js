@@ -33,12 +33,12 @@ export default new Router({
       component: Buyer
     },
     {
-      path: '/sell/:id',
+      path: '/sell',
       name: 'Sell',
       component: Sell
     },
     {
-      path: '/buy/:id',
+      path: '/buy',
       name: 'Buy',
       component: Buy
     },
