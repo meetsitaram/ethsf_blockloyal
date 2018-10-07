@@ -7,6 +7,8 @@ import 'vuetify/dist/vuetify.min.css'
 // import('../assets/main.styl')
 import Seller from '@/components/Seller'
 import Buyer from '@/components/Buyer'
+import Sell from '@/components/Sell'
+import Buy from '@/components/Buy'
 import Contract from '@/components/Contract'
 import 'material-design-icons-iconfont/dist/material-design-icons.css' // Ensure you are using css-loader
 
@@ -29,6 +31,16 @@ export default new Router({
       path: '/buyer/:id',
       name: 'Buyer',
       component: Buyer
+    },
+    {
+      path: '/sell/:id',
+      name: 'Sell',
+      component: Sell
+    },
+    {
+      path: '/buy/:id',
+      name: 'Buy',
+      component: Buy
     },
     {
       path: '/contract/:id',
