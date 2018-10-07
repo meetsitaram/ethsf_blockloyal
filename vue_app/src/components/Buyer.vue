@@ -46,19 +46,19 @@
     },
 
     beforeRouteEnter (to, from, next) {
+      transfer().then((data) => {
+        next(vm => vm.printResult(null, data))
+      })
       getBuyer(to.params.id).then((data) => {
         next(vm => vm.refresh(null, data))
       })
       getContractName().then((data) => {
-        next(vm => vm.refreshName(null, data))
+        next(vm => vm.printResult(null, data))
       })
       getContractSupply().then((data) => {
         next(vm => vm.printResult(null, data))
       })
       getBalance().then((data) => {
-        next(vm => vm.printResult(null, data))
-      })
-      transfer().then((data) => {
         next(vm => vm.printResult(null, data))
       })
     }
