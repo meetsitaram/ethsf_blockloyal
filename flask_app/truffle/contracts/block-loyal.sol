@@ -14,7 +14,7 @@ contract Loyalty{
 
 	mapping (address => uint256) public balanceOf;
 
-	mapping (address => member) public memberList; 
+	mapping (address => customer) public memberList; 
 	
 	mapping (bytes32 => uint) public tokensReceived;
 	
@@ -23,7 +23,7 @@ contract Loyalty{
 	uint public totalTokens; 
 	uint public balanceTokens; //no of remaining tokens
 	uint public tokenPrice;   //price per token
-
+	event Transfer(address indexed from, address indexed to, uint256 value);
 	constructor(uint tokens, uint pricePerToken, bytes32[] customerNames) public {
 		
 		customerList =customerNames;
@@ -33,11 +33,11 @@ contract Loyalty{
 
 	}
 
-	function totalTokensFor(bytes32 customer) view public returns (uint){
-		return tokensReceived[customer]; 
+	function totalTokensFor(bytes32 _customer) view public returns (uint){
+		return tokensReceived[_customer]; 
 	}
 
-	function transfer(address _from, address _to, uint value) public {
+	function transfer(address _from, address _to, uint _value) public {
 		require(_to != 0x0);
 		// Check if the sender has enough
 		require(balanceOf[_from] >= _value);
