@@ -1,0 +1,349 @@
+{
+  "contractName": "Loyal",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a7230582091371a5571fe80a9c76717c5b1981c68d038507efdce473efbab675b9197ab090029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a7230582091371a5571fe80a9c76717c5b1981c68d038507efdce473efbab675b9197ab090029",
+  "sourceMap": "26:124:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:124:2;;;;;;;",
+  "deployedSourceMap": "26:124:2:-;;;;;",
+  "source": "pragma solidity ^0.4.18;\n\ncontract Loyal{\n\tstruct member{\n\t\taddress memberAddress;\n\t\tuint tokensBought;\n\t\tuint[] tokenspermember;\n\t\tbool canBuy;\n\n\t}\n}",
+  "sourcePath": "/Users/rahul/ethsf_blockloyal/truffle/contracts/block-loyal.sol",
+  "ast": {
+    "absolutePath": "/Users/rahul/ethsf_blockloyal/truffle/contracts/block-loyal.sol",
+    "exportedSymbols": {
+      "Loyal": [
+        444
+      ]
+    },
+    "id": 445,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 433,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".18"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 444,
+        "linearizedBaseContracts": [
+          444
+        ],
+        "name": "Loyal",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Loyal.member",
+            "id": 443,
+            "members": [
+              {
+                "constant": false,
+                "id": 435,
+                "name": "memberAddress",
+                "nodeType": "VariableDeclaration",
+                "scope": 443,
+                "src": "60:21:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 434,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "60:7:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 437,
+                "name": "tokensBought",
+                "nodeType": "VariableDeclaration",
+                "scope": 443,
+                "src": "85:17:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 436,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "85:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 440,
+                "name": "tokenspermember",
+                "nodeType": "VariableDeclaration",
+                "scope": 443,
+                "src": "106:22:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                  "typeString": "uint256[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 438,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "106:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 439,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "106:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                    "typeString": "uint256[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 442,
+                "name": "canBuy",
+                "nodeType": "VariableDeclaration",
+                "scope": 443,
+                "src": "132:11:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 441,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "132:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "member",
+            "nodeType": "StructDefinition",
+            "scope": 444,
+            "src": "43:105:2",
+            "visibility": "public"
+          }
+        ],
+        "scope": 445,
+        "src": "26:124:2"
+      }
+    ],
+    "src": "0:150:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/rahul/ethsf_blockloyal/truffle/contracts/block-loyal.sol",
+    "exportedSymbols": {
+      "Loyal": [
+        444
+      ]
+    },
+    "id": 445,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 433,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".18"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 444,
+        "linearizedBaseContracts": [
+          444
+        ],
+        "name": "Loyal",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Loyal.member",
+            "id": 443,
+            "members": [
+              {
+                "constant": false,
+                "id": 435,
+                "name": "memberAddress",
+                "nodeType": "VariableDeclaration",
+                "scope": 443,
+                "src": "60:21:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 434,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "60:7:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 437,
+                "name": "tokensBought",
+                "nodeType": "VariableDeclaration",
+                "scope": 443,
+                "src": "85:17:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 436,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "85:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 440,
+                "name": "tokenspermember",
+                "nodeType": "VariableDeclaration",
+                "scope": 443,
+                "src": "106:22:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                  "typeString": "uint256[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 438,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "106:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 439,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "106:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                    "typeString": "uint256[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 442,
+                "name": "canBuy",
+                "nodeType": "VariableDeclaration",
+                "scope": 443,
+                "src": "132:11:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 441,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "132:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "member",
+            "nodeType": "StructDefinition",
+            "scope": 444,
+            "src": "43:105:2",
+            "visibility": "public"
+          }
+        ],
+        "scope": 445,
+        "src": "26:124:2"
+      }
+    ],
+    "src": "0:150:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-10-06T23:22:22.177Z"
+}
