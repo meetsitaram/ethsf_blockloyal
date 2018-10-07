@@ -26,7 +26,7 @@
 </template>
 
 <script>
-  import {getBuyer} from './api'
+  import {getBuyer, getContractName, getContractSupply, getBalance, transfer} from './api'
 
   export default {
     data () {
@@ -39,12 +39,27 @@
       refresh (err, data) {
         this.buyer = data
         console.log('refresh : ', data, ' err:', err)
+      },
+      printResult (err, data) {
+        console.log('res : ', data, ' err:', err)
       }
     },
 
     beforeRouteEnter (to, from, next) {
       getBuyer(to.params.id).then((data) => {
         next(vm => vm.refresh(null, data))
+      })
+      getContractName().then((data) => {
+        next(vm => vm.refreshName(null, data))
+      })
+      getContractSupply().then((data) => {
+        next(vm => vm.printResult(null, data))
+      })
+      getBalance().then((data) => {
+        next(vm => vm.printResult(null, data))
+      })
+      transfer().then((data) => {
+        next(vm => vm.printResult(null, data))
       })
     }
   }
