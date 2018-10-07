@@ -1,12 +1,21 @@
 import axios from 'axios'
-
 import Web3 from 'Web3'
-console.log(Web3)
-// import UnitedMileagePlusToken from '../../../../flask_app/truffle/build/UnitedMileagePlusToken.json'
-// var myContract = new web3.eth.Contract(jsonInterface, '0x5b1056e3EcC0f5dBFD332275A3d11D9d37422D42'], {
-//   from: '0x1234567890123456789012345678901234567891', // default from address
-//   gasPrice: '20000000000' // default gas price in wei, 20 gwei in this case
-// });
+import contract from 'truffle-contract'
+import jsonInterface from '../../../flask_app/truffle/build/contracts/UnitedMileagePlusToken.json'
+var loyalty = contract(jsonInterface)
+console.log('jsonI:', loyalty)
+window.me = function (c) {
+  loyalty.deployed().then(function (contractInstance) {
+    console.log('ci', contractInstance)
+  }).catch(e => {
+    console.log(e)
+  })
+}
+
+// var ganache = require('ganache-cli')
+// web3.setProvider(ganache.provider());
+let web3 = new Web3(Web3.givenProvider || 'HTTP://127.0.0.1:7545')
+// let web3 = new Web3(ganache.provider())
 
 export function getBuyer (id) {
   console.log('in get buyer')
@@ -16,6 +25,15 @@ export function getBuyer (id) {
         .then(response => {
           var data = response.data
           console.log('buyer:', data)
+
+          console.log(web3.eth)
+          var myContract = new web3.eth.Contract(jsonInterface.abi, '0x5b1056e3EcC0f5dBFD332275A3d11D9d37422D42', {
+            from: '0x84B0a26eFce6A3a4E60cF29e577392755D4D3673', // default from address
+            gasPrice: '20000000000' // default gas price in wei, 20 gwei in this case
+          })
+          console.log('contract', myContract)
+          console.log('method', myContract.methods.balanceOf('0x84B0a26eFce6A3a4E60cF29e577392755D4D3673'))
+
           resolve(data)
         })
         .catch(e => {
