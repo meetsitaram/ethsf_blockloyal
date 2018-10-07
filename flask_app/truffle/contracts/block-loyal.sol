@@ -39,17 +39,17 @@ contract Loyalty{
 
 	function transfer(address _from, address _to, uint value) public {
 		require(_to != 0x0);
-        // Check if the sender has enough
-        require(balanceOf[_from] >= _value);
-        // Check for overflows
-        require(balanceOf[_to] + _value >= balanceOf[_to]);
-        // Save this for an assertion in the future
-        //uint previousBalances = balanceOf[_from] + balanceOf[_to];
-        // Subtract from the sender
-        balanceOf[_from] -= _value;
-        // Add the same to the recipient
-        balanceOf[_to] += _value;
-        emit Transfer(_from, _to, _value);
+		// Check if the sender has enough
+		require(balanceOf[_from] >= _value);
+		// Check for overflows
+		require(balanceOf[_to] + _value >= balanceOf[_to]);
+		// Save this for an assertion in the future
+		//uint previousBalances = balanceOf[_from] + balanceOf[_to];
+		// Subtract from the sender
+		balanceOf[_from] -= _value;
+		// Add the same to the recipient
+		balanceOf[_to] += _value;
+		emit Transfer(_from, _to, _value);
 
 	}
 
@@ -62,20 +62,20 @@ contract Loyalty{
 	}
 
 	function tokensSold() view public returns (uint) {
-    return totalTokens - balanceTokens;
-  }
+		return totalTokens - balanceTokens;
+	}
 
-    function allcustomers() view public returns (bytes32[]) {
-    return customerList;
-  }
+	function allcustomers() view public returns (bytes32[]) {
+		return customerList;
+	}
 
 
-    function buy() payable public returns (uint) {
-    uint tokensToBuy = msg.value / tokenPrice;
-    require(tokensToBuy <= balanceTokens);
-    memberList[msg.sender].memberAddress = msg.sender;
-    memberList[msg.sender].tokensBought += tokensToBuy;
-    balanceTokens -= tokensToBuy;
-    return tokensToBuy;
-  }
+	function buy() payable public returns (uint) {
+		uint tokensToBuy = msg.value / tokenPrice;
+		require(tokensToBuy <= balanceTokens);
+		memberList[msg.sender].memberAddress = msg.sender;
+		memberList[msg.sender].tokensBought += tokensToBuy;
+		balanceTokens -= tokensToBuy;
+		return tokensToBuy;
+	}
 }
